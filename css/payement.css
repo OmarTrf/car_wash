@@ -1,0 +1,453 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+.clear{
+	clear: both;
+}
+/*.container-main{
+	background-image: linear-gradient(to top, rgba(43,46,131,.5), rgba(18,161,154,1));
+	width: 100%;
+	height: 100%;
+}*/
+/*Start Menu*/
+.bar.active{
+	transform: rotate(360deg);
+	background-color: transparent;
+}
+.bar.active:before{
+	transform: translateY(0) rotate(45deg);
+}
+.bar.active:after{
+	transform: translateY(0) rotate(-45deg);
+}
+.menu-down{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	background-color: #2B2E83;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s ease-in-out;
+}
+.menu-down ul{
+	width: 40%;
+	margin-top: 15px;
+	list-style: none;
+	overflow: hidden;
+}
+.menu-down ul li{
+	padding: 25px 0;
+	border-bottom: 3px solid #fff;
+	width: 100%;
+	position: relative;
+	left: -100%;
+}
+.menu-down ul li a{
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*End Menu*/
+/*Start Header*/
+nav{
+	width: 100%;
+	background: #2B2E83;
+	position: relative;
+	padding: 5px 0;
+	z-index: 1000;
+}
+.menu{
+	width: 90%;
+	margin:auto;
+	padding: 0 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	z-index: 2;
+}
+.menu .logo{
+	width: 110px;
+	height: 65px;
+}
+.menu .logo img{
+	width: 100%;
+	height: 100%;
+}
+.menu .left-nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 15%;/**/
+}
+.menu .left-nav a{
+	font-family: 'Roboto', sans-serif;
+	margin-top: 4.5px;
+	padding: 4px 22px;
+	text-align: left;
+	text-decoration: none;
+	border-radius: 10px;
+	border: 2px solid #fff;
+	color: #fff;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+.menu .left-nav a:hover{
+	background-color: #fff;
+	color: #2B2E83;
+}
+.hamburger-menu{
+	height: 4rem;
+	width: 3rem;
+	cursor: pointer;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bar{
+	position: relative;
+	right: -100px;
+	width: 1.9rem;
+	height: 3px;
+	border-radius: 1px;
+	background-color: #fff;
+	transition: .5s;
+	z-index: 1000;
+}
+.bar:before,
+.bar:after{
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: 3px;
+	background-color: #fff;
+	transition: .5s;
+}
+.bar:after{
+	transform: translateY(10px);
+}
+.bar:before{
+	transform: translateY(-10px);
+}
+section{
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+section .info{
+	width: 60%;
+	height: 15%;
+}
+section .info h1{
+	text-transform: uppercase;
+	padding: 13px 0;
+	color: #353b48;
+}
+section .info p{
+	color: #718093;
+}
+section .info p i{
+ margin-right: 7px;
+}
+section .content{
+	margin-top: 20px;
+	padding: 20px;
+	width: 60%;
+	height: 75%;
+	border-radius: 10px;
+	background-color: #f5f6fa;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+section .content .heading{
+	margin:20px auto;
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+section .content .heading button{
+	width: 29%;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+section .content .heading button i{
+	font-size: 70px;
+	color: #2B2E83;
+}
+section .content .heading button p{
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 3px auto;
+	color: #2B2E83;
+}
+section .content .heading button:hover,
+section .content .heading button.active{
+	background-color: #2B2E83;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+section .content .heading button:hover i,
+section .content .heading button.active i{
+	color: #fff;
+}
+section .content .heading button:hover p,
+section .content .heading button.active p{
+	color: #fff;
+}
+/*--------------------Cash on delevery */
+.cashD{
+	position: relative;
+	top: 30px;
+	width: 70%;
+	margin: 25px auto;
+	text-align: center;
+	height: 250px;
+}
+.cashD h4{
+	font-size: 15px;
+	line-height: 1.3;
+	color: #2B2E83;
+}
+.cashD i{
+	margin: auto;
+	margin-top: 20px;
+	font-size: 100px;
+	color: #2B2E83;
+}
+/*-------------------------credit-card------------*/
+.credit-card{
+	padding: 10px;
+	width: 95%;
+	margin: 15px auto;
+}
+.credit-card form{
+	width: 75%;
+	margin: auto;
+}
+.credit-card .formGroup input{
+	width: 96%;
+	padding:16px 10px;
+	background-color: transparent;
+}
+.credit-card .formGroup > input{
+	width: 98%;
+}
+.credit-card form input[type='text']{
+	border-radius: 7px;
+	border: 2px solid #dcdde1;
+	height: 30px;
+}
+.credit-card .formGroup{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+	width: 100%;
+}	
+.credit-card .formGroup label{
+	margin: 10px 5px;
+	color: #353b48;
+}
+.credit-card .formGroup:first-child{
+	flex-direction: column;
+}
+.credit-card .formGroup  div{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.check{
+	position: relative;
+	top: 5px;
+}
+.check input{
+	width: 15px;
+	height: 15px;
+}
+.check label{
+	margin-left: 15px;
+	color: #353b48;
+}
+.credit-card button{
+	font-size: 15px;
+	position: relative;
+	top: 30px;
+	width: 150px;
+	height: 30px;
+	cursor: pointer;
+	background-color: #2B2E83;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.paypal{
+	height: 260px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.paypal button,
+.cashD button{
+	width:200px;
+	height: 43px;
+	font-size: 16px;
+	background-color: #2B2E83;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.cashD button{
+	height: 38px;
+	top: 10px;
+}
+.paypal button i{
+	font-size: 30px;
+	position: relative;
+	left: -40px;
+}
+.part .box{
+	display: none;
+}
+
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1350px){
+	nav img{
+		width: 75px!important;
+		height: 60px!important;
+	}
+	.bar{
+		right:-30px;
+	}
+	section .info{
+		position: relative;
+		top: -150px!important;
+		height: auto;
+		width: 88%;
+	}
+	section .info h1{
+		font-size: 18px;
+	}
+	section .info p{
+		font-size: 14px;
+	}
+	section .info p i{
+	 font-size: 13px;
+	}
+	section .content{
+		position: relative;
+		top: -50px;
+		width: 90%;
+		height: auto;
+	}
+	section .content .heading{
+		width: 94%;
+	}
+	section .content .heading button i{
+		font-size: 40px;
+	}
+	section .content .heading button p{
+		font-size: 13px;
+	}
+	.credit-card form label{
+		font-size: 13px;
+	}
+	.credit-card form input{
+		font-size: 11px;
+	}
+	.cashD button{
+		width: 160px!important;
+	}
+}
+@media screen and (max-width: 700px){
+	nav button{
+		padding: 12px;
+	}
+	nav img{
+		position: relative;
+		top: 3px!important;
+		width: 65px!important;
+		height: 60px!important;
+	}
+	.bar{
+		right:0;
+	}
+	section .info{
+		position: relative;
+		top: -40px!important;
+	}
+	section .content{
+		top: -20px;
+		height: 520px;
+	}
+	section .content .heading button i{
+		font-size: 35px;
+	}
+	section .content .heading button p{
+		font-size: 12px;
+	}
+	/*Cash*/
+	.cashD{
+		width: 95%;
+		font-size: 20px;
+	}
+	.cashD h4{
+		font-size: 13.5px;
+		text-align: left;
+		font-weight: 500;
+	}
+	.cashD i{
+		position: relative;
+		top: 20px;
+		font-size: 110px;
+	}
+	.credit-card .formGroup{
+		display: block;
+	}
+	.credit-card .formGroup input{
+		margin: 10px 0;
+		width: 100%;
+	}
+	.credit-card .formGroup  div{
+		display: block;
+		width: 100%;
+	}
+	.check{
+		padding: 5px;
+	}
+	.credit-card form button,
+	.cashD button{
+			width: 100px;
+			height: 30px;
+			font-size: 13px;
+			letter-spacing: 1px;
+	}
+	.cashD button{
+		position: relative;
+		top: 45px;
+	}
+}
